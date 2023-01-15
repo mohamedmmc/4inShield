@@ -939,11 +939,11 @@
             <objects>
                 <viewController id="XCg-g0-PKz" customClass="AddChildSegueController" customModule="_inShield" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q2J-2s-o1V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1050"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zv-Pt-U0K">
-                                <rect key="frame" x="0.0" y="48" width="320" height="1002"/>
+                                <rect key="frame" x="0.0" y="48" width="320" height="802"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E7-NY-9Ft">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1160"/>
@@ -1071,7 +1071,7 @@ It also gives you the ability to block or allow installed applications</string>
                             <constraint firstItem="8zv-Pt-U0K" firstAttribute="leading" secondItem="x2F-Jc-7uL" secondAttribute="leading" id="lVh-PF-CZC"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="320" height="1050"/>
+                    <size key="freeformSize" width="320" height="850"/>
                     <connections>
                         <segue destination="6fl-Jd-Svo" kind="modal" identifier="addChildFormSegue" modalPresentationStyle="fullScreen" id="5JQ-TB-7jW"/>
                         <segue destination="mtM-xQ-i5G" kind="presentation" identifier="skip1Segue" modalPresentationStyle="fullScreen" id="4BP-Jw-zkA"/>
@@ -1408,6 +1408,8 @@ It also gives you the ability to block or allow installed applications</string>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NP-Ql-4mN">
                                                         <rect key="frame" x="0.0" y="0.0" width="73" height="34.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" red="0.2475706637" green="0.38718730210000002" blue="0.6619725823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Month"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1415,9 +1417,13 @@ It also gives you the ability to block or allow installed applications</string>
                                                                 <real key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="monthAction:" destination="kuE-sY-fQs" eventType="touchUpInside" id="AdH-AF-LS8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiL-e6-LO8">
                                                         <rect key="frame" x="79" y="0.0" width="73" height="34.5"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Week"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1425,9 +1431,13 @@ It also gives you the ability to block or allow installed applications</string>
                                                                 <real key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="weekAction:" destination="kuE-sY-fQs" eventType="touchUpInside" id="lRS-fG-hTB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9n-Eo-J9N">
                                                         <rect key="frame" x="158" y="0.0" width="73" height="34.5"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Day"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1435,6 +1445,9 @@ It also gives you the ability to block or allow installed applications</string>
                                                                 <real key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dayAction:" destination="kuE-sY-fQs" eventType="touchUpInside" id="f2T-eo-O5h"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1447,7 +1460,7 @@ It also gives you the ability to block or allow installed applications</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQ8-7M-4AR">
                                                 <rect key="frame" x="40" y="351" width="140" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08u-X1-n6Q">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08u-X1-n6Q">
                                                         <rect key="frame" x="20" y="59.5" width="100" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1482,7 +1495,7 @@ It also gives you the ability to block or allow installed applications</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ai-8w-N2i">
                                                 <rect key="frame" x="234" y="351" width="140" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOZ-Sz-uTg">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOZ-Sz-uTg">
                                                         <rect key="frame" x="20" y="59.5" width="100" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1517,7 +1530,7 @@ It also gives you the ability to block or allow installed applications</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spb-MN-t1k">
                                                 <rect key="frame" x="40" y="481" width="140" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-VY-VlC">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-VY-VlC">
                                                         <rect key="frame" x="20" y="59.5" width="100" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1552,7 +1565,7 @@ It also gives you the ability to block or allow installed applications</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtv-in-sux">
                                                 <rect key="frame" x="234" y="481" width="140" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT1-z9-Ytr">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT1-z9-Ytr">
                                                         <rect key="frame" x="20" y="59.5" width="100" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1671,7 +1684,7 @@ It also gives you the ability to block or allow installed applications</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.2475706637" green="0.38718730210000002" blue="0.6619725823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.24705882352941178" green="0.38718730210000002" blue="0.6619725823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="wU0-9e-tdG" firstAttribute="leading" secondItem="B1z-O2-jib" secondAttribute="leading" constant="40" id="1y0-Ma-Rkj"/>
                                             <constraint firstAttribute="bottom" secondItem="sm0-90-6dx" secondAttribute="bottom" constant="33" id="6cV-fZ-i87"/>
@@ -1721,6 +1734,15 @@ It also gives you the ability to block or allow installed applications</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="DASHBOARD" image="iphone.gen2" catalog="system" id="TBR-fr-gIt"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="dangerLevelLabel" destination="08u-X1-n6Q" id="QhT-kP-mBW"/>
+                        <outlet property="dayButton" destination="g9n-Eo-J9N" id="DBh-ln-PkZ"/>
+                        <outlet property="deviseUsageLabel" destination="3AL-VY-VlC" id="jWl-eI-QcE"/>
+                        <outlet property="lastNightSleepLabel" destination="eOZ-Sz-uTg" id="5IJ-wu-jlM"/>
+                        <outlet property="monthButton" destination="1NP-Ql-4mN" id="828-mI-isV"/>
+                        <outlet property="phoneCallLabel" destination="gT1-z9-Ytr" id="dlg-ET-TII"/>
+                        <outlet property="weekButton" destination="XiL-e6-LO8" id="fjH-5G-huA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1G-qW-IfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1746,7 +1768,7 @@ It also gives you the ability to block or allow installed applications</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="UAG-kd-4Mi"/>
-        <segue reference="OhM-fc-A2x"/>
+        <segue reference="4BP-Jw-zkA"/>
         <segue reference="UVB-Ri-6oN"/>
     </inferredMetricsTieBreakers>
     <resources>
